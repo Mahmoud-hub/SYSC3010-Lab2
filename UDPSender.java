@@ -30,7 +30,9 @@ public class UDPSender {
 	        		 if (message.length()==0) break;
 	        		 byte [] data = message.getBytes() ;
 	        		 DatagramPacket packet = new DatagramPacket( data, data.length, host, port ) ;
-	        		while(i < n){
+			 	int i = 1;
+	        		while(i <= n){
+					socket.send("Message" + i);
 					socket.send( packet ) ;
 				}
 	         } 
