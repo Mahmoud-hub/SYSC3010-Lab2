@@ -18,6 +18,7 @@ while 1:
 #    s.sendall(data.encode('utf-8'))
     newMessage = "";
     message = "Message"
+    buf, address = s.recvfrom(port)
     for(int i = 1;i < int(number);i+=1):
         if(i != 1){
             print ("Waiting to receive on port %d : press Ctrl-C or Ctrl-Break to stop " % port)
