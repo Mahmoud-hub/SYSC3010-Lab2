@@ -16,11 +16,10 @@ while 1:
     if not len(data):
         break
 #    s.sendall(data.encode('utf-8'))
-    
+    newMessage = "";
     message = "Message"
-    for(int i = 1;i <= number;i+=1){
-        data = message + i
-        s.sendto(data.encode('utf-8'), server_address)
-    }
+    for(int i = 1;i < int(number);i++):
+        newMessage = message + str(i)
+        s.sendto(newMessage.encode('utf-8'), server_address)
 s.shutdown(1)
 
