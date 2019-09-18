@@ -18,7 +18,10 @@ while 1:
 #    s.sendall(data.encode('utf-8'))
     newMessage = "";
     message = "Message"
-    for(int i = 1;i < int(number);i++):
+    for(int i = 1;i < int(number);i+=1):
+        if(i != 1){
+            print ("Waiting to receive on port %d : press Ctrl-C or Ctrl-Break to stop " % port)
+        }
         newMessage = message + str(i)
         s.sendto(newMessage.encode('utf-8'), server_address)
 s.shutdown(1)
